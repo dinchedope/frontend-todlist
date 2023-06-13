@@ -1,0 +1,28 @@
+.login{
+
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-top: 50px;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.buttonOk{
+    margin-top: 20px;
+    width: 60px;
+    height: 23px;
+    background-color: #d6d6d6;
+    border: none;
+    box-shadow: 2px 2px 0 0  #b5aeae;
+    cursor: pointer;
+}
+
+.signIn{
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+}

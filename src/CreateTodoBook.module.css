@@ -1,0 +1,60 @@
+
+.add{
+    box-sizing: border-box;
+    display: flex;
+    margin: 0px;
+    width: 216px;
+    height: 370px;
+    border-radius: 14px;
+    background-color: #ffffff;
+    box-shadow: 5px 9px 16px #6b6b6b40; /*0b4df3*/
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+
+}
+
+.add:hover{
+    box-shadow: 5px 9px 16px #0b4df340;
+    
+}
+
+.plusWrapper{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.plus{
+
+    display: block;
+    background-image: url('./image/plus_hover.png');
+    background-size: cover;
+    width: inherit;
+    height: inherit;
+    opacity: 100;
+    
+    z-index: 1;
+}
+
+
+
+.plus2{
+    margin: auto;
+    display: block;
+    background-image: url('./image/plus.png');
+    background-size: cover;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    z-index: 0;
+    opacity: 100;
+    top: 0;
+    left: 0;
+    transition: all 0.2s;
+}
+
+.plus2:hover{
+    opacity: 0;
+}
+

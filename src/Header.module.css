@@ -1,0 +1,52 @@
+.header{
+    margin-top: 54px;
+    height: auto;
+    width: 100%; 
+    color:white;
+}
+
+.wrapper{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items:end;
+    justify-content: space-between;
+}
+
+.logo{
+    text-decoration: none;
+    font-family: Bahnschrift;
+    font-size: 36.7pt;
+    letter-spacing: 0.06em;
+    font-weight: 350;
+    margin : 0;
+    display: block;
+    cursor: pointer;
+    transition: color 0.4s ease-out;
+    color: white;
+}
+
+.logo:hover{
+    color: #ad69b3;
+}
+
+.headerNav{
+    display: flex;
+    gap: 56px;
+    font-family: Bahnschrift;
+    font-size: 18pt;
+    font-weight: 300;
+    letter-spacing: -0.04em;
+}
+
+.navLink{
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+    color:white;
+}
+
+.navLink:hover{
+    color: red;
+}

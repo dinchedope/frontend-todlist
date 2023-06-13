@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Bahnschrift';
+  src:  url(./fonts/bahnschrift.ttf) format('truetype');
+}
+
+@font-face{
+  font-family: 'DINRoundpro';
+  src: url(./fonts/dinroundpro.otf) format('opentype'),
+       url(./fonts/dinroundpro_black.otf) format('opentype'), 
+       url(./fonts/dinroundpro_bold.otf) format('opentype'),
+       url(./fonts/dinroundpro_light.otf) format('opentype'),
+       url(./fonts/dinroundpro_medi.otf) format('opentype');
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #222330; 
+}
+
+#root{
+  width: 100%;
+  height: 100%;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
+.test{
+  width: 90%;
+  background-color: red;
+  margin: auto;
+  min-height: 100%;
+  height: auto;
+}
+
+.background{
+  width: 64%;
+  min-height: 100vh;
+  padding-left: 12px;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.mainBlock{
+  margin-top: 20px;
+}
+

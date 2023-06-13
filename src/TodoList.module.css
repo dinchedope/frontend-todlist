@@ -1,0 +1,139 @@
+.main{
+    display: flex;
+    gap: 60px
+}
+
+.createTask{
+    background-color: black;
+    width: fit-content;
+    padding: 20px;
+        border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+
+.input{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+    height: 20px;
+    width: 98%;
+}
+
+.textareai{
+    display: block;
+    padding: 10px;
+    max-width: 400px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+    max-height: 400px;
+  }
+
+.toDo{
+    color: white;
+    width: 33%;
+    max-width: 33%;
+    max-height: max-content;
+    border-radius: 12px;
+    border: 3px solid black;
+    box-shadow: 1px 1px 1px #999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-top: 1px;
+    padding-bottom: 10px;
+}
+
+.toDoSelect{
+    color: white;
+    width: 200px;
+    /* height: 350px; */
+    max-height: max-content;
+    border-radius: 12px;
+    border: 3px solid grey;
+    box-shadow: 1px 1px 1px #999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-top: 1px;
+    padding-bottom: 10px;
+}
+
+
+.task{
+    background-color: black;
+    width: 97%;
+    max-height: 100px;
+    display: flex;
+    overflow: hidden;
+    transition: all .4s ease-out;
+    
+}
+
+.taskHover2{
+    box-shadow: 0 2px 3px green;
+    height: auto;
+}
+
+.task:hover{
+    background-color: red;
+    max-height: fit-content;
+}
+
+.h3{
+    color: black;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.h4{
+    display: block;
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 9px;
+}
+
+.buttonCreate{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    max-width: 100px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+.remove{
+    background-image: url('./image/trash.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 20%;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+    transform: rotate(0);
+}
+
+.remove:hover{
+    overflow: hidden;
+    transform: rotate(-45deg);
+}
+
+.info{
+    max-width: 77%;
+    display: flex;
+    flex-direction: column;
+}
+
+.p{
+    word-wrap: break-word;
+    color: white;
+    max-width: inherit;
+}
