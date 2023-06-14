@@ -4,6 +4,7 @@
 }
 
 .list{
+    position: relative;
     margin: 0px;
     width: 216px;
     height: 370px;
@@ -11,7 +12,7 @@
     background-color: #ffffff;
     box-shadow: 5px 9px 16px #6b6b6b40; /*0b4df3*/
     transition: all 0.2s ease-in;
-    padding: 14px 15px 0px 18px;
+    padding: 14px 15px 36px 18px;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -45,12 +46,18 @@
     overflow: hidden;
 }
 
-.headerLogo{
+.headerMenu{
     background-image: url('./image/menu.svg');
     background-size: 100%;
     background-repeat: no-repeat;
     width: 32px;
     height: 32px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.headerMenu:hover{
+    transform: scale(1.1);
 }
 
 a{
@@ -60,10 +67,10 @@ a{
 }
 
 .listBody{
-    overflow: hidden;
-    height: 80%;
+    overflow: auto;
     margin-bottom: 36px;
     margin-top: 21px;
+
 }
 
 .description{
@@ -73,6 +80,83 @@ a{
     color: #676767;
     font-size: 15pt;
     line-height: 18pt;
-
+    height: 275px;
+    width: inherit;
+    word-wrap: break-word;
 }
+
+.listMenu{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width:fit-content;
+    justify-content: center;
+    height: 100%;
+    gap: 20%;
+    align-items: center;
+}
+
+.menuItemBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menuItem{
+    width: 65px;
+    height: 65px;
+    stroke: #c9c9c9;
+    transition: all 0.3s ease-in;
+}
+
+.menuItem:hover{
+    stroke: #000000;
+}
+
+.listBody::-webkit-scrollbar {
+    width: 5px;
+}
+
+.menuBack{
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    background-image: url('./image/arrow-right.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.menuBack:hover{
+    transform: scale(1.1);
+}
+  
+  /* Track */
+.listBody::-webkit-scrollbar-track {
+    background-color: #dbdbdb;
+    border-radius: 50px;
+  }
+   
+  /* Handle */
+.listBody::-webkit-scrollbar-thumb {
+    background: #a3a3a3;
+    border-radius: 50px;
+    -webkit-transition: all 2s ease-out;
+    -moz-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+  }
+  
+  /* Handle on hover */
+.listBody::-webkit-scrollbar-thumb:hover {
+    background: #878787; 
+}
+
+
+
 

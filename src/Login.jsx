@@ -38,6 +38,10 @@ function Login(props){
 
     async function fetchSubmit(){
         const data = await dispatch(fetchAuth(authData))
+        console.log(data);
+        if(!data.payload){
+            return ;
+        }
         if('token' in data.payload){
             window.localStorage.setItem('token', data.payload.token);
         }

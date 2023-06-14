@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import module from './Header.module.css';
 
 import { isAuth, logout } from './redux/slices/auth';
+import { deleteData } from './redux/slices/todoLists';
 import { useDispatch, useSelector } from 'react-redux';
 
 function Header(){
@@ -11,9 +12,14 @@ function Header(){
     function logoutFunc()
     {
         dispatch(logout());
+        dispatch(deleteData());
+        window.localStorage.removeItem('token');
     }
+
+    console.log(userIsAuth);
     
     return(
+        
         <div className={module.header}>
             <div className={module.wrapper}>
                 <Link className={module.logo} to="/">

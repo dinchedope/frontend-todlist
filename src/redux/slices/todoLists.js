@@ -16,7 +16,11 @@ const initialState = {
 const todoListsSlice = createSlice({
     name: 'todoLists',
     initialState,
-    reducers: {},
+    reducers: {
+        deleteData :(state) => {
+            state.todoLists.items = [];
+        }
+    },
     extraReducers: {
         [fetchTodoLists.pending]: (state, action) => {
             state.todoLists.items = [];
@@ -34,3 +38,5 @@ const todoListsSlice = createSlice({
 });
 
 export const todoListsReducer = todoListsSlice.reducer;
+
+export const { deleteData } = todoListsSlice.actions;

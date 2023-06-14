@@ -24,11 +24,9 @@ function Main(props){
         dispatch(fetchTodoLists());
     }, []);
 
-    todoLists.items.map((obj, index) => console.log(obj));
-
     return(
         <div className={module.Main}>
-             {/* <h1>Схоже, що у вас ще не створено жодного списку справ</h1> */}
+            {/* <h1>Схоже, що у вас ще не створено жодного списку справ</h1> */}
             <div className={module.funcChanger}>
                 <div className={module.funcChangerMenu}>
                     <a className={module.funcChangerButt}>Todo</a>
@@ -37,14 +35,14 @@ function Main(props){
             </div>
             <div className={module.books}>
             
-                {(isTodoListLoading ? [...Array(2)] : todoLists.items).map((obj, index) => isTodoListLoading ? ( 
+                {isTodoListLoading || todoLists.items === undefined ? (<></>) : todoLists.items.map((obj, index) => isTodoListLoading ? ( 
                     <></>
                 ):
                 (
                     <TodoBook id={obj._id} color={Standart.bcgcolor}  hoverColor={Standart.hoverColor}  name={obj.title} description={obj.description} date={"123"} />
                 )
                 )}
-                    <CreateTodoBook/>
+                <CreateTodoBook/>
             </div>
         </div>
     );
