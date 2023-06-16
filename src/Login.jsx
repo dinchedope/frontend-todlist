@@ -59,7 +59,7 @@ function Login(props){
                 <p>email</p>
                 <input onChange={e => {emailChange(e.target.value)}} type="text" name="input"/>
                 <p>password</p>
-                <input onChange={e => {passwordChange(e.target.value)}} type="text" name="input"/>
+                <input onChange={e => {passwordChange(e.target.value)}} type="password" name="input"/>
                 <button className={module.button} onClick={fetchSubmit}>OK</button>
             </div>
             {/* <Register/> */}
