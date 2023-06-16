@@ -87,8 +87,8 @@ function DataPanel(){
     function ConfirmCreate(){
         try{
             axios.post('/todolist', {
-                title,
-                description,
+                title: title ? title : " ",
+                description: description ? description : " ",
                 haveAccess: [accInfo.data._id],
             }).then(state => {
                 dispatch(fetchTodoLists());
