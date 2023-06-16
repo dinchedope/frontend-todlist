@@ -38,7 +38,7 @@ function Login(props){
     }
 
     async function fetchSubmit(){
-        const data = await dispatch(fetchAuth(authData))
+        const data = await dispatch(fetchAuth(authData));
         console.log(data);
         if(!data.payload){
             return ;
