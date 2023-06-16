@@ -17,7 +17,7 @@ const todoListsSlice = createSlice({
     name: 'todoLists',
     initialState,
     reducers: {
-        deleteData :(state) => {
+        deleteTodoListsData :(state) => {
             state.todoLists.items = [];
         }
     },
@@ -39,4 +39,4 @@ const todoListsSlice = createSlice({
 
 export const todoListsReducer = todoListsSlice.reducer;
 
-export const { deleteData } = todoListsSlice.actions;
+export const { deleteTodoListsData } = todoListsSlice.actions;

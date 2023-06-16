@@ -1,7 +1,9 @@
 import module from './Main.module.css';
 import TodoBook from './TodoBook';
+import DataPanel from './DataPanel';
 import CreateTodoBook from './CreateTodoBook';
 import { useDispatch, useSelector }  from 'react-redux';
+import { isAuth, logout } from './redux/slices/auth';
 
 import React from 'react';
 import axios from './axios';
@@ -15,6 +17,7 @@ function Main(props){
         bcgcolor: '#000000',
         hoverColor: '#4D4D4D',
     };
+    const userIsAuth = useSelector(isAuth);
     const dispatch = useDispatch();
     const { todoLists } = useSelector(state => state.todoLists);
 
@@ -25,8 +28,12 @@ function Main(props){
     }, []);
 
     return(
-        <div className={module.Main}>
-            {/* <h1>Схоже, що у вас ще не створено жодного списку справ</h1> */}
+        <>
+          <div className={module.mainWrapper}>
+            
+            {userIsAuth ? (
+                <>
+            <div className={module.Main}>
             <div className={module.funcChanger}>
                 <div className={module.funcChangerMenu}>
                     <a className={module.funcChangerButt}>Todo</a>
@@ -34,7 +41,6 @@ function Main(props){
                 </div>
             </div>
             <div className={module.books}>
-            
                 {isTodoListLoading || todoLists.items === undefined ? (<></>) : todoLists.items.map((obj, index) => isTodoListLoading ? ( 
                     <></>
                 ):
@@ -44,7 +50,19 @@ function Main(props){
                 )}
                 <CreateTodoBook/>
             </div>
+        
+            </div>
+            <div className={module.dataPanel}>
+                <DataPanel />
+            </div></>
+            ) : (<>
+            <h1>You haven't account. If You need account to testing contact me via my github</h1>
+            </>)}
+            
+
         </div>
+        </>
+      
     );
 }
 

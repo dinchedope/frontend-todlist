@@ -1,0 +1,43 @@
+.chart{
+    width: auto;
+    height: 162px;
+    margin-top: 10px;
+}
+
+.labels{
+    display: flex;
+    flex-direction: column;
+}
+
+.labels_circle{
+    display: flex;
+    font-family: DINRoundpro;
+    font-weight: 200;
+    font-size: 18pt;
+    align-items: center;
+}
+
+
+.labels_circle1{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    margin-right: 10px;
+}
+
+.labels_circle2{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #ffd800;
+    margin-right: 10px;
+}
+
+.labels_circle3{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #84ff00;
+    margin-right: 10px;
+}

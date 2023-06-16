@@ -1,15 +1,19 @@
 .main{
     display: flex;
-    gap: 60px
+    gap: 60px;
+    margin-top: 92px;
+    height: auto;
 }
 
 .createTask{
-    background-color: black;
+    background-color: #fff;
+    box-shadow: 5px 9px 16px #6b6b6b40; /*0b4df3*/
     width: fit-content;
     padding: 20px;
-        border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
+    border-radius: 5px;
+    height: 317px;
+    box-sizing: border-box;
+    /* max-height: 317px; */
 }
 
 
@@ -24,22 +28,24 @@
 .textareai{
     display: block;
     padding: 10px;
-    max-width: 400px;
+    max-width: 300px;
+    min-width: 200px;
     line-height: 1.5;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 1px #999;
-    max-height: 400px;
+    max-height: 115px;
+    min-height: 115px;
   }
 
 .toDo{
     color: white;
-    width: 33%;
-    max-width: 33%;
-    max-height: max-content;
+    width:33%;
+    overflow: hidden;
+    min-height: 317px;
+    height: fit-content;
     border-radius: 12px;
-    border: 3px solid black;
-    box-shadow: 1px 1px 1px #999;
+    border: 2px dashed #c9c9c9;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,22 +72,20 @@
 
 
 .task{
-    background-color: black;
+    color: black;
+    background-color: #fff;
+    box-shadow: 5px 9px 16px #6b6b6b40; /*0b4df3*/
     width: 97%;
-    max-height: 100px;
+    max-width: 97%;
+    height: 100px;
     display: flex;
+    justify-content: space-between;
     overflow: hidden;
     transition: all .4s ease-out;
-    
-}
-
-.taskHover2{
-    box-shadow: 0 2px 3px green;
-    height: auto;
 }
 
 .task:hover{
-    background-color: red;
+    background-color: #d0a4a4;
     max-height: fit-content;
 }
 
@@ -91,12 +95,7 @@
     margin-bottom: 20px;
 }
 
-.h4{
-    display: block;
-    margin: 0;
-    font-size: 20px;
-    margin-bottom: 9px;
-}
+
 
 .buttonCreate{
     display: block;
@@ -111,10 +110,12 @@
 }
 
 .remove{
-    background-image: url('./image/trash.svg');
+    background-image: url('./image/trash-2.svg');
     background-size: 100%;
     background-repeat: no-repeat;
+    
     width: 20%;
+    height: auto;
     align-items: center;
     overflow: hidden;
     transition: all 0.4s ease-out;
@@ -128,12 +129,52 @@
 
 .info{
     max-width: 77%;
+    min-height: 80px;
+    box-sizing: border-box;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
 
+.h4{
+    margin: 0;
+    font-size: 18pt;
+    line-height: 18pt;
+    margin-bottom: 9px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .p{
     word-wrap: break-word;
-    color: white;
-    max-width: inherit;
+    color: black;
+    max-width: 100%;
+    height: fit-content;
+    overflow: auto;
 }
+
+.p::-webkit-scrollbar {
+    width: 5px;
+}
+
+ /* Track */
+ .p::-webkit-scrollbar-track {
+    background-color: #dbdbdb;
+    border-radius: 50px;
+  }
+   
+  /* Handle */
+.p::-webkit-scrollbar-thumb {
+    background: #a3a3a3;
+    border-radius: 50px;
+    -webkit-transition: all 2s ease-out;
+    -moz-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+  }
+  
+  /* Handle on hover */
+.p::-webkit-scrollbar-thumb:hover {
+    background: #878787; 
+}
+

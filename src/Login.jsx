@@ -1,7 +1,8 @@
-import './Login.css';
 import Register from './Register';
 import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector }  from 'react-redux';
+import module from './Login.module.css'
+
 
 import React from 'react';
 import axios from './axios';
@@ -52,14 +53,14 @@ function Login(props){
     }
 
     return(
-        <div className='signIn'>
-            <div className="login">
-                <h2>Login</h2>
+        <div className={module.signIn}>
+            <div className={module.login}>
+                <h2 className={module.h2}>Login</h2>
                 <p>email</p>
                 <input onChange={e => {emailChange(e.target.value)}} type="text" name="input"/>
                 <p>password</p>
                 <input onChange={e => {passwordChange(e.target.value)}} type="text" name="input"/>
-                <button onClick={fetchSubmit}>OK</button>
+                <button className={module.button} onClick={fetchSubmit}>OK</button>
             </div>
             {/* <Register/> */}
         </div>

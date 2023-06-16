@@ -1,5 +1,5 @@
 import module from'./TodoList.module.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import axios from './axios';
 
 
@@ -13,9 +13,9 @@ function TodoList(props){
     const userIsAuth = useSelector(isAuth);
 
     const [list, setList] = React.useState([
-        {arr: [], name: "toDo"},
-        {arr: [], name: "toCall"},
-        {arr: [], name: "toGet"},
+        {arr: [], name: "Task"},
+        {arr: [], name: "In process"},
+        {arr: [], name: "Done"},
     ])
 
     const [reqToServer, setReqToServer] = React.useState({});
@@ -27,6 +27,7 @@ function TodoList(props){
     const { id } = useParams();
 
     if(!isFirstLoad){
+        console.log("Patching");
         Patch();
     }
 
@@ -34,7 +35,7 @@ function TodoList(props){
         console.log('use effect');
         axios
         .get(`/todolist/${id}`)
-        .then((obj) =>{
+        .then((obj) =>{ 
             setIsError(false);
             setReqToServer(obj.data.todoList);
 
@@ -143,24 +144,27 @@ function TodoList(props){
         //console.log(reqToServer);
         axios.patch(`/todolist/${id}`, reqToServer)
             .then((obj) =>{
+                console.log("PathOK");
             })
             .catch((err) => {
-                //console.log(err);
+                setIsError(true);
+                console.log(err);      
             });
+        
     }
 
     // if(!userIsAuth){
-    //     return (<Navigate to="/"/>);
+    //     setIsError(true);
     // }
 
-    if(isError){
-        return(<><h1>404</h1></>);
-    }
+    // if(isError){
+    //     return(<><h1>404</h1></>);
+    // }
 
     return (
-        <>
+        <div className={module.main}>
             {!isError ? (
-                <div className={module.main}>
+                <>
                 <div className={module.createTask}>
                     <p className={module.p}>Name</p>
                     <input className={module.input} type="Text"/>
@@ -205,9 +209,9 @@ function TodoList(props){
                     )
                 })}
 
-                </div>): 
-                (<></>)}
-        </>
+            </>): 
+                (<><h1>404</h1></>)}
+        </div>
         
         
         
