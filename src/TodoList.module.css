@@ -141,6 +141,7 @@
     font-size: 18pt;
     line-height: 18pt;
     margin-bottom: 9px;
+    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
