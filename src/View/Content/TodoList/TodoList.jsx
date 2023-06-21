@@ -187,7 +187,9 @@ function TodoList(props){
                                     >
                                     
                                         <div className={module.info}>
-                                            <h4 className={module.h4}>{task.name}</h4>
+                                            <div className={module.taskName}>
+                                                <h4 className={module.h4}>{task.name}</h4>
+                                            </div>
                                             <p className={module.p}>{task.description}</p>
                                         </div>
                                         <div onClick={(e) => deleteTask(e, table, task, index)} className={module.remove}>

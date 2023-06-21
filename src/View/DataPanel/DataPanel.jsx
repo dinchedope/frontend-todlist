@@ -55,14 +55,13 @@ function DataPanel(){
             ...{"title": title,
                 "description": description ? description : itemData.description,}
             })
-
-
         try{
             axios.patch(`/todolist/${itemData._id}`, { ...itemData, 
             ...{"title": title ? title : itemData.title,
                 "description": description ? description : itemData.description,}
             }).then(state=>{
                     dispatch(fetchTodoLists());
+                    Cancel();
                 }
             )
             
@@ -92,6 +91,7 @@ function DataPanel(){
                 haveAccess: [accInfo.data._id],
             }).then(state => {
                 dispatch(fetchTodoLists());
+                Cancel();
             })
         } catch(err){
 

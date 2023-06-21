@@ -28,7 +28,6 @@ function Main(props){
     return(
         <>
           <div className={module.mainWrapper}>
-            
             {userIsAuth ? (
                 <>
             <div className={module.Main}>
@@ -53,7 +52,7 @@ function Main(props){
             <div className={module.dataPanel}>
                 <DataPanel />
             </div></>
-            ) : (<>
+            ) : userIsAuth === false ? (<></>) : (<>
             <h1>You haven't account. If You need account to testing contact me via my github</h1>
             </>)}
             

@@ -29,6 +29,7 @@
 .signIn{
     display: flex;
     gap: 70px;
+    margin-top: 92px;
     justify-content: center;
 }
 

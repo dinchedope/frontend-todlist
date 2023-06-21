@@ -135,27 +135,33 @@
     position: relative;
 }
 
+.taskName{
+    width: 100%;
+    height: fit-content;
+    top: -10px;
+    align-items: center;
+}
+
 .h4{
-    display: unset;
     margin: 0;
     font-size: 18pt;
-    line-height: 18pt;
-    height: 18pt;
+    box-sizing: border-box;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
 .p{
-    margin-top: 20px;
+    margin-top: 2px;
     display: block;
     word-wrap: break-word;
     color: black;
     max-width: 100%;
+    overflow: auto;
     height: fit-content;
 }
 
-/* .p::-webkit-scrollbar {
+.p::-webkit-scrollbar {
     width: 5px;
 }
 
@@ -178,5 +184,5 @@
 
 .p::-webkit-scrollbar-thumb:hover {
     background: #878787; 
-} */
+}
 
