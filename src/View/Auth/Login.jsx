@@ -1,13 +1,12 @@
-import Register from './Register';
 import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector }  from 'react-redux';
 import module from './Login.module.css'
 
 
 import React from 'react';
-import axios from './axios';
+import axios from '../../axios';
 
-import { fetchAuth, isAuth } from './redux/slices/auth';
+import { fetchAuth, isAuth } from '../../redux/slices/auth';
 
 function Login(props){
 

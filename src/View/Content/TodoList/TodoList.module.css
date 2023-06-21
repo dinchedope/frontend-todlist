@@ -110,7 +110,7 @@
 }
 
 .remove{
-    background-image: url('./image/trash-2.svg');
+    background-image: url('../../../image/trash-2.svg');
     background-size: 100%;
     background-repeat: no-repeat;
     
@@ -129,42 +129,43 @@
 
 .info{
     max-width: 77%;
-    min-height: 80px;
     box-sizing: border-box;
-    height: auto;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .h4{
+    display: unset;
     margin: 0;
     font-size: 18pt;
     line-height: 18pt;
-    margin-bottom: 9px;
+    height: 18pt;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
 .p{
+    margin-top: 20px;
+    display: block;
     word-wrap: break-word;
     color: black;
     max-width: 100%;
     height: fit-content;
-    overflow: auto;
 }
 
-.p::-webkit-scrollbar {
+/* .p::-webkit-scrollbar {
     width: 5px;
 }
 
- /* Track */
+
  .p::-webkit-scrollbar-track {
     background-color: #dbdbdb;
     border-radius: 50px;
   }
    
-  /* Handle */
+
 .p::-webkit-scrollbar-thumb {
     background: #a3a3a3;
     border-radius: 50px;
@@ -174,8 +175,8 @@
     transition: all 2s ease-out;
   }
   
-  /* Handle on hover */
+
 .p::-webkit-scrollbar-thumb:hover {
     background: #878787; 
-}
+} */
 

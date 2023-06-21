@@ -47,7 +47,7 @@
 }
 
 .headerMenu{
-    background-image: url('./image/menu.svg');
+    background-image: url('../../../image/menu.svg');
     background-size: 100%;
     background-repeat: no-repeat;
     width: 32px;
@@ -122,7 +122,7 @@ a{
     position: absolute;
     top: 14px;
     right: 15px;
-    background-image: url('./image/arrow-right.svg');
+    background-image: url('../../../image/arrow-right.svg');
     background-size: 100%;
     background-repeat: no-repeat;
     width: 32px;

@@ -28,7 +28,7 @@
 .plus{
 
     display: block;
-    background-image: url('./image/plus_hover.png');
+    background-image: url('../../../image/plus_hover.png');
     background-size: cover;
     width: inherit;
     height: inherit;
@@ -42,7 +42,7 @@
 .plus2{
     margin: auto;
     display: block;
-    background-image: url('./image/plus.png');
+    background-image: url('../../../image/plus.png');
     background-size: cover;
     width: inherit;
     height: inherit;

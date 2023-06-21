@@ -1,11 +1,10 @@
 import module from'./TodoList.module.css';
 import React, { useEffect } from 'react';
-import axios from './axios';
-
+import axios from '../../../axios';
 
 import { Navigate, useParams  } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { isAuth } from './redux/slices/auth';
+import { isAuth } from '../../../redux/slices/auth';
 
 
 function TodoList(props){
@@ -153,14 +152,6 @@ function TodoList(props){
         
     }
 
-    // if(!userIsAuth){
-    //     setIsError(true);
-    // }
-
-    // if(isError){
-    //     return(<><h1>404</h1></>);
-    // }
-
     return (
         <div className={module.main}>
             {!isError ? (
@@ -212,8 +203,6 @@ function TodoList(props){
             </>): 
                 (<><h1>404</h1></>)}
         </div>
-        
-        
         
     );
 };

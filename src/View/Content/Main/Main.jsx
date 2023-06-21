@@ -1,15 +1,13 @@
 import module from './Main.module.css';
-import TodoBook from './TodoBook';
-import DataPanel from './DataPanel';
-import CreateTodoBook from './CreateTodoBook';
+import TodoBook from './../TodoBook/TodoBook.jsx';
+import DataPanel from '../../DataPanel/DataPanel.jsx'
+import CreateTodoBook from './../CreateTodoBook/CreateTodoBook.jsx'
 import { useDispatch, useSelector }  from 'react-redux';
-import { isAuth, logout } from './redux/slices/auth';
+import { isAuth, logout } from '../../../redux/slices/auth';
 
 import React from 'react';
-import axios from './axios';
 
-
-import { fetchTodoLists } from './redux/slices/todoLists';
+import { fetchTodoLists } from '../../../redux/slices/todoLists';
 
 
 function Main(props){

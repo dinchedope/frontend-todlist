@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import module from './App.module.css';
-import Header from './Header.jsx';
-import Main from './Main.jsx';
-import Footer from './Footer';
-import Login from './Login.jsx';
-import TodoList from './TodoList.jsx';
+import Header from '../Content/Header/Header.jsx';
+import Main from '../Content/Main/Main.jsx';
+import Footer from '../Content/Footer/Footer.jsx';
+import Login from '../Auth/Login.jsx';
+import TodoList from '../Content/TodoList/TodoList.jsx';
 
 import { Routes, Route } from 'react-router-dom';
-import { fetchAuthMe, isAuth } from './redux/slices/auth';
+import { fetchAuthMe, isAuth } from '../../redux/slices/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 

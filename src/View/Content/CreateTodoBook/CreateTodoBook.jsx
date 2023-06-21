@@ -1,8 +1,6 @@
-import react from 'react';
-import { Link } from 'react-router-dom';
 import module from'./CreateTodoBook.module.css';
-import { setIsEditing } from './redux/slices/editing';
-import {setData} from './redux/slices/dataInfo';
+import { setIsEditing } from '../../../redux/slices/editing';
+import {setData} from '../../../redux/slices/dataInfo';
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function CreateTodoBook(props){

@@ -2,11 +2,10 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
 import module from './TodoBook.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import {setData} from './redux/slices/dataInfo';
-import TodoList from './TodoList';
-import { setIsEditing } from './redux/slices/editing';
-import axios from './axios.js';
-import { fetchTodoLists } from './redux/slices/todoLists';
+import {setData} from '../../../redux/slices/dataInfo';
+import { setIsEditing } from '../../../redux/slices/editing';
+import axios from '../../../axios.js';
+import { fetchTodoLists } from '../../../redux/slices/todoLists';
 
 
 
@@ -124,7 +123,6 @@ import { fetchTodoLists } from './redux/slices/todoLists';
 
         }
     }
-
 
     return(
         <div onMouseOver={DataWrite} 

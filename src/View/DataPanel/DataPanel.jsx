@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import module from './DataPanel.module.css'
 import { useDispatch, useSelector } from 'react-redux';
-import {setData} from './redux/slices/dataInfo';
-import Charts from './Chart';
-import { setIsEditing } from './redux/slices/editing';
-import axios from './axios.js';
-import { fetchTodoLists } from './redux/slices/todoLists';
+import {setData} from '../../redux/slices/dataInfo';
+import Charts from './Chart/Chart';
+import { setIsEditing } from '../../redux/slices/editing';
+import axios from '../../axios.js';
+import { fetchTodoLists } from '../../redux/slices/todoLists';
 
 const Month = [
     "Jan",

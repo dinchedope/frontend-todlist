@@ -1,10 +1,10 @@
 import { Link, Navigate } from 'react-router-dom';
 import module from './Header.module.css';
 
-import { isAuth, logout } from './redux/slices/auth';
-import { deleteTodoListsData } from './redux/slices/todoLists';
+import { isAuth, logout } from '../../../redux/slices/auth';
+import { deleteTodoListsData } from '../../../redux/slices/todoLists';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteData } from './redux/slices/dataInfo';
+import { deleteData } from '../../../redux/slices/dataInfo';
 
 function Header(){
     const dispatch = useDispatch();
